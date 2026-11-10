@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"required":["status","endSeconds","lastDialogue","reason"],"properties":{"status":{"type":"string","enum":["found","no_story","uncertain"]},"endSeconds":{"type":"number"},"lastDialogue":{"type":"string"},"reason":{"type":"string"}}}

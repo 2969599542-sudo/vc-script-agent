@@ -1,0 +1,4 @@
+interface:
+  display_name: "VC脚本Agent"
+  short_description: "独立拆解短视频首段剧情、替换产品并迭代新脚本，附原片截图和图文导出"
+  default_prompt: "用 $vc-script-agent 拆解这个本地视频的第一段完整剧情，生成带原片截图的五列脚本。"

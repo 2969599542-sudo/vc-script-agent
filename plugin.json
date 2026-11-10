@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "vc-script-agent",
+  "version": "1.0.0",
+  "description": "独立视频脚本拆解、产品替换、剧情迭代与原片截图导出Agent",
+  "author": { "name": "VC" },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "VC脚本Agent",
+        "shortDescription": "视频首段拆解、产品替换与剧情迭代",
+        "longDescription": "读取本地视频，提取真实原帧和台词，拆解第一段完整剧情，按产品资料局部转换或迭代新剧情，导出离线图文脚本。需要本地Node、Python及用户自己的模型登录。",
+        "developerName": "VC",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": "拆解这个视频的第一段完整剧情，输出带原片截图的五列脚本。"
+      }
+    }
+  }
+}

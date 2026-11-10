@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+work/
+outputs/
+*.private.*
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.zip
+*.mp4
+*.mov
+*.webm
