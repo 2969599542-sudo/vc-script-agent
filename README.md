@@ -4,12 +4,11 @@
 
 ## 安装入口
 
-**此仓库为私有仓库。** 使用获得仓库授权的GitHub账号登录，然后打开：
+从 [最新 Release](https://github.com/2969599542-sudo/vc-script-agent/releases/latest) 下载 `vc-script-agent-windows-x64.zip`，完整解压。包内的 `先看这里.txt` 有完整安装与使用步骤。Windows 安装入口为 `install.cmd`，已具备的依赖可以跳过。
 
-- [下载稳定版本](https://github.com/2969599542-sudo/vc-script-agent/releases/latest)
-- [安装说明](https://github.com/2969599542-sudo/vc-script-agent/blob/main/INSTALL.md)
+如果由 Codex 协助安装，可以在对话中输入：
 
-下载Release中的 `vc-script-agent-1.0.1.zip`，解压后按INSTALL.md执行。没有仓库访问权限时GitHub会显示404；需要由仓库所有者添加协作者，访问链接本身不会授予权限。
+> 请从这个仓库的最新 Release 下载 VC 脚本拆解 Windows x64 安装包，解压后阅读“先看这里.txt”，检查这台电脑的 Node.js、npm 和 Python，再安装缺少的组件及 vc-script-agent。安装后运行环境检查并告诉我如何开始拆解。
 
 ## 包含功能
 
@@ -56,4 +55,4 @@ node runtime/cli.mjs doctor
 
 工程结构：`skills/vc-script-agent/runtime/` 为独立处理器，`SKILL.md` 为Agent工作流，`plugin.json` 为便于支持Agent Plugins格式的客户端识别的元数据。实际跨电脑安装以INSTALL.md中已验证的本地Skill安装流程为准。
 
-基于[OpenAI官方Skill格式](https://learn.chatgpt.com/docs/build-skills)。该项目为私有团队项目，未授予公开再分发许可。
+基于 [OpenAI 官方 Skill 格式](https://learn.chatgpt.com/docs/build-skills)。

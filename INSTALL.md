@@ -2,14 +2,13 @@
 
 ## 1. 准备账号和软件
 
-- 获得此私有GitHub仓库的访问权限，并在浏览器登录该账号。
-- 安装Node.js 22.13以上（包含npm）、Python 3.10–3.12（安装时勾选加入PATH）。
+- 安装 [Node.js Windows LTS](https://nodejs.org/)（至少22.13，保留 npm 组件）和 [Python 3.12](https://www.python.org/downloads/windows/)（安装时勾选 Add Python to PATH）。
 - 安装并登录Codex；模型调用使用每台电脑自己的登录，不复制原电脑凭据。
 - 无需安装Tabbit、蝉妈妈或连接VC日报网站。
 
 ## 2. 下载与安装
 
-进入 [Release下载页](https://github.com/2969599542-sudo/vc-script-agent/releases/latest)，下载 `vc-script-agent-1.0.1.zip` 并解压。
+从 [Release 下载页](https://github.com/2969599542-sudo/vc-script-agent/releases/latest) 下载 `vc-script-agent-windows-x64.zip`，完整解压到一个单独的文件夹。包内 `先看这里.txt` 有逐步说明，`依赖安装程序` 目录包含 Windows x64 安装程序。
 
 Windows：双击解压目录中的 `install.cmd`。也可以打开该目录的PowerShell，执行：
 
@@ -73,7 +72,7 @@ node runtime\cli.mjs run --video "D:\视频\对标.mp4" --out "D:\脚本输出\�
 
 ## 故障处理
 
-- GitHub 404：检查当前登录账号是否已获仓库授权。
+- 下载链接失效：打开最新 Release 页面，使用其 Assets 下的 Windows x64 ZIP。
 - 环境检查失败：按提示补装Node/Python/Codex；不要从其他电脑复制登录文件。
 - 模型未知结果：检查输出目录的status.json和已保存结果，不自动重复调用。已有完整result.json时可执行 `node runtime/cli.mjs export --out "输出目录"` 重新生成导出文件。
 - 首段边界不明：用户核对视频后提供--end，不能无条件拆整片。
