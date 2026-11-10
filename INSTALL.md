@@ -9,7 +9,7 @@
 
 ## 2. 下载与安装
 
-进入 [Release下载页](https://github.com/2969599542-sudo/vc-script-agent/releases/latest)，下载 `vc-script-agent-1.0.0.zip` 并解压。
+进入 [Release下载页](https://github.com/2969599542-sudo/vc-script-agent/releases/latest)，下载 `vc-script-agent-1.0.1.zip` 并解压。
 
 Windows：双击解压目录中的 `install.cmd`。也可以打开该目录的PowerShell，执行：
 

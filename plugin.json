@@ -1,7 +1,7 @@
 {
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "$schema": "https://agent-plugins.org/schemas/1.0.1/plugin.schema.json",
   "name": "vc-script-agent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "独立视频脚本拆解、产品替换、剧情迭代与原片截图导出Agent",
   "author": { "name": "VC" },
   "extensions": {

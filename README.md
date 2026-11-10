@@ -9,7 +9,7 @@
 - [下载稳定版本](https://github.com/2969599542-sudo/vc-script-agent/releases/latest)
 - [安装说明](https://github.com/2969599542-sudo/vc-script-agent/blob/main/INSTALL.md)
 
-下载Release中的 `vc-script-agent-1.0.0.zip`，解压后按INSTALL.md执行。没有仓库访问权限时GitHub会显示404；需要由仓库所有者添加协作者，访问链接本身不会授予权限。
+下载Release中的 `vc-script-agent-1.0.1.zip`，解压后按INSTALL.md执行。没有仓库访问权限时GitHub会显示404；需要由仓库所有者添加协作者，访问链接本身不会授予权限。
 
 ## 包含功能
 
