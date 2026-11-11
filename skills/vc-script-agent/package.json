@@ -1,6 +1,6 @@
 {
   "name": "vc-script-agent",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": true,
   "type": "module",
   "engines": { "node": ">=22.13.0" },

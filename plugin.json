@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.1/plugin.schema.json",
   "name": "vc-script-agent",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "独立视频脚本拆解、产品替换、剧情迭代与原片截图导出Agent",
   "author": { "name": "VC" },
   "extensions": {
@@ -13,7 +13,7 @@
         "developerName": "VC",
         "category": "Productivity",
         "capabilities": [],
-        "defaultPrompt": "拆解这个视频的第一段完整剧情，输出带原片截图的五列脚本。"
+        "defaultPrompt": "拆解这个视频的第一段完整剧情，输出带原片截图的四列脚本。"
       }
     }
   }

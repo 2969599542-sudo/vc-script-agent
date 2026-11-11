@@ -13,12 +13,17 @@ test('exports offline image evidence and escapes user text, TSV blocks formula e
   await writeFile(path.join(dir,'frames/manifest.json'),JSON.stringify([{index:1,seconds:0,file:'frame-001.jpg'}]));
   const result=await exportResult(sample(),dir);assert.equal(result.frames,1);
   const html=await readFile(result.html,'utf8');assert.match(html,/data:image\/jpeg;base64,/);assert.ok(!html.includes('<img onerror='));assert.ok(!html.includes('src="http'));
-  const tsv=await readFile(result.tsv,'utf8');assert.match(tsv,/'=1\+1/);assert.equal(tsv.split('\n')[1].split('\t').length,5);
+  const tsv=await readFile(result.tsv,'utf8');assert.match(tsv,/'=1\+1/);assert.equal(tsv.split('\n')[1].split('\t').length,4);
+  assert.deepEqual(Array.from(html.matchAll(/<th scope="col">([^<]+)<\/th>/g),match=>match[1]),['景别','画面描述','搭配文案','对标画面截图']);
+  assert.match(html,/<figcaption>0\.00 秒<\/figcaption>/);
   const forged=sample();forged.rows[0].frames[0].seconds=1;await assert.rejects(exportResult(forged,dir),/frame_evidence_mismatch/);
  }finally{await rm(dir,{recursive:true,force:true})}
 });
 test('rejects duplicate shot identities and absent reference images',()=>{
  const duplicate=sample();duplicate.rows.push(structuredClone(duplicate.rows[0]));assert.equal(scriptSchema.safeParse(duplicate).success,false);
  const missing=sample();missing.rows[0].frames=[];assert.equal(scriptSchema.safeParse(missing).success,false);
- assert.ok(exportTsv(sample()).includes('序号'));
+ const explicit=sample();explicit.rows[0].scene='景别：中近景。人物回头。';
+ assert.match(exportTsv(explicit),/中近景 1\t人物回头。 0–1秒/);
+ const legacy=sample();legacy.rows[0].scene='后厨双人中景，人物回头。';
+ assert.match(exportTsv(legacy),/中景 1\t后厨双人中景，人物回头。/);
 });
